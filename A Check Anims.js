@@ -5,8 +5,8 @@ function OnStart()
 {
 	//Create a layout with objects vertically centered.
 	lay = app.CreateLayout( "Linear", "VCenter,FillXY" )
-
-	spn = app.CreateSpinner( JSON.parse(app.ReadFile( "a.json" )),1, -1 );
+  animations = ["NewsPaper","Jelly","Flash","RubberBand","ShakeHorizontal","ShakeVertical","Swing","TaDa","Bounce","BounceLeft","BounceTop","BounceRight","BounceBottom","Fadein","Fall","FallRotate","FlipFromVerticalSwing","FlipFromHorizontal","FlipFromBottom","FlipFromVertical","FlipFromHorizontalSwing","FlipFromTop","FlipFromRight","FlipFromLeft","SlideFromLeft","SlideFromTop","SlideFromRight","SlideFromBottom","ZoominEnter", "ZoominLeft","ZoominTop","ZoominRight","ZoominBottom","ScaleFromTop","ScaleFromRight","ScaleFromLeft","ScaleFromBottom"];
+	spn = app.CreateSpinner( animations,1, -1 );
 	spn.SetOnChange((item, index)=>{ txt.SetText( item );} );
 	lay.AddChild( spn );
 	//Create a text label and add it to layout.
